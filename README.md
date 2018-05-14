@@ -47,6 +47,6 @@ rackup
 ## Logo
 
 <p align="center">
-  <<a href="https://ibb.co/keXa1x"><img src="https://preview.ibb.co/mLq68c/Logo.png" alt="Logo" border="0"></a>
+  <<a href="https://ibb.co/nkOsTn"><img src="https://image.ibb.co/gijcuS/240_F_157145617_I0_Dv_ZCovewd9kup_Hpj_C21_Mrfe_C6_M9i2_I.jpg" alt="Logo" border="0"></a>
   
 </p>
