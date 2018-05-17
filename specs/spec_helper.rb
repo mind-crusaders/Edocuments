@@ -14,4 +14,3 @@ end
 DATA = {}
 DATA[:accounts] = YAML.load File.read('db/seeds/accounts_seed.yml')
 DATA[:documents] = YAML.load File.read('db/seeds/documents_seed.yml')
-#DATA[:documents] = YAML.load File.read('db/seeds/documents_seed.yml')
