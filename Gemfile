@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.5.1'
 
 # Web API
 gem 'roda'
@@ -9,6 +8,8 @@ gem 'json'
 # Configuration
 gem 'econfig'
 gem 'rake'
+
+# Diagnostic
 gem 'pry'
 
 # Security
