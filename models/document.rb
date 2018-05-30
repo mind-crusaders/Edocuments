@@ -16,7 +16,7 @@ module Edocument
 
     
 
-    plugin :uuid, field: :id
+    #plugin :uuid, field: :id
 
     plugin :whitelist_security
     set_allowed_columns :filename, :doctype
