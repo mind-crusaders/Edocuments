@@ -1,6 +1,18 @@
 ---
 development:
   DB_FILENAME: db/dev.db
+  DB_KEY: 'uo+NjFvxXgFjoScigLKl132LWO0R6/nHvglkzxkjA10='
+  SECURE_SCHEME: HTTP
+  API_URL: http://localhost:3000/api/v1
+  APP_URL: http://localhost:9292
 
+  
 test:
   DB_FILENAME: db/test.db
+  SECURE_SCHEME: HTTP
+  API_URL: http://localhost:3000/api/v1
+  APP_URL: http://localhost:9292
+
+
+production:
+  SECURE_SCHEME: HTTPS
