@@ -5,7 +5,7 @@ require 'sequel'
 Sequel.migration do
   change do
     create_table(:documents) do
-      primary_key :id
+      primary_key :id, null: false
       foreign_key :owner_id, :accounts
       String :filename_secure, unique: true, null: false
       String :doctype_secure, unique: true
