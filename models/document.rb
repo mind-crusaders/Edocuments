@@ -5,10 +5,10 @@ module Edocument
   class Document < Sequel::Model
     many_to_one :owner, class: :'Edocument::Account'
   
-    many_to_many :viewers,
-                 class: :'Edocument::Account',
-                 join_table: :accounts_documents,
-                 left_key: :document_id, right_key: :viewer_id
+    #many_to_many :viewers,
+     #            class: :'Edocument::Account',
+      #           join_table: :accounts_documents,
+       #          left_key: :document_id, right_key: :viewer_id
 
     #one_to_many :documents
     plugin :association_dependencies
