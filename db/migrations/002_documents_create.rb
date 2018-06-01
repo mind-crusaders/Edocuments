@@ -6,7 +6,7 @@ Sequel.migration do
   change do
     create_table(:documents) do
       uuid :id, primary_key: true
-      foreign_key :owner_id, :accounts
+      foreign_key :owner_id, table: :accounts
       String :filename_secure, unique: true, null: false
       String :doctype_secure, unique: true
       DateTime :created_time
