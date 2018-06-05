@@ -15,7 +15,6 @@ module Edocument
     one_to_many :documents
     plugin :association_dependencies
     add_association_dependencies documents: :destroy, viewers: :nullify
-
     
 
     plugin :uuid, field: :id
