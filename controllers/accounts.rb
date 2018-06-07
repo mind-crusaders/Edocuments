@@ -17,7 +17,7 @@ module Edocument
         routing.get do
           account = Account.first(username: username)
           account ? account.to_json : raise('Account not found')
-        rescue StandardError => error
+        rescue StandardError
           routing.halt 404, { message: error.message }.to_json
         end
       end
