@@ -12,13 +12,11 @@ module Edocument
         routing.route('authenticate', 'accounts')
       end
 
-      routing.on String do |username|
+      routing.on String do 
         # GET api/v1/accounts/[USERNAME]
-        routing.get do
+        routing.get do |username|
           account = Account.first(username: username)
           account ? account.to_json : raise('Account not found')
-      rescue StandardError
-          routing.halt 404, { message: error.message }.to_json
         end
       end
 
@@ -31,11 +29,6 @@ module Edocument
         response.status = 201
         response['Location'] = "#{@account_route}/#{new_account.id}"
         { message: 'Project saved', data: new_account }.to_json
-      rescue Sequel::MassAssignmentRestriction
-        routing.halt 400, { message: 'Illegal Request' }.to_json
-      rescue StandardError => error
-        puts error.inspect
-        routing.halt 500, { message: error.message }.to_json
       end
     end
   end
