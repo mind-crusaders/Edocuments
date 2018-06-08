@@ -3,7 +3,7 @@
 
 require 'roda'
 
-module Credence
+module Edocument
   # Web controller for Credence API
   class Api < Roda
     route('authenticate', 'accounts') do |routing|
