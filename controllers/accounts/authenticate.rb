@@ -10,7 +10,8 @@ module Edocument
       routing.post do
         credentials = JsonRequestBody.parse_symbolize(request.body.read)
         auth_account = AuthenticateAccount.call(credentials)
-        auth_account.to_json 
+        auth_account.to_json
+      end 
     end
   end
 end
