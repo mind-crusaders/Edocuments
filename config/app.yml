@@ -5,6 +5,7 @@ development:
   SECURE_SCHEME: HTTP
   API_URL: http://localhost:3000/api/v1
   APP_URL: http://localhost:9292
+  MSG_KEY: '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'
 
   
 test:
@@ -16,3 +17,5 @@ test:
 
 production:
   SECURE_SCHEME: HTTPS
+  API_URL: https://edocuments-api.herokuapp.com/api/v1
+  APP_URL: https://edocuments-app.herokuapp.com/
