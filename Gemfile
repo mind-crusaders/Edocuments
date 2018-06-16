@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'roda'
 gem 'puma'
 gem 'json'
+gem 'sendgrid-ruby'
 
 # Configuration
 gem 'econfig'
