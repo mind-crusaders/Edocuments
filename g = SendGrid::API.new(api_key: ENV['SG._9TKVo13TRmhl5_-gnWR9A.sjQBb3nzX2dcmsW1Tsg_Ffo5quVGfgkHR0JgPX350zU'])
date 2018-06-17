@@ -1,0 +1,18 @@
+=> [32m#<SendGrid::Mail:0x0000562d8d210f00[0m
+ @asm[32m=[0m[1;36mnil[0m,
+ @attachments[32m=[0m[],
+ @batch_id[32m=[0m[1;36mnil[0m,
+ @categories[32m=[0m[],
+ @contents[32m=[0m[{[31m[1;31m"[0m[31mtype[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mtext/plain[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mvalue[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mand easy to do anywhere, even with Ruby[1;31m"[0m[31m[0m}],
+ @custom_args[32m=[0m{},
+ @from[32m=[0m[32m#<SendGrid::Email:0x0000562d8d66f010[0m @email[32m=[0m[31m[1;31m"[0m[31mphiwokuhlegondwe@gmail.com[1;31m"[0m[31m[0m, @name[32m=[0m[1;36mnil[0m[32m>[0m,
+ @headers[32m=[0m{},
+ @ip_pool_name[32m=[0m[1;36mnil[0m,
+ @mail_settings[32m=[0m[1;36mnil[0m,
+ @personalizations[32m=[0m[{[31m[1;31m"[0m[31mto[1;31m"[0m[31m[0m=>[{[31m[1;31m"[0m[31memail[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mgondwephiwokuhle@gmail.com[1;31m"[0m[31m[0m}]}],
+ @reply_to[32m=[0m[1;36mnil[0m,
+ @sections[32m=[0m{},
+ @send_at[32m=[0m[1;36mnil[0m,
+ @subject[32m=[0m[31m[1;31m"[0m[31mSending with SendGrid is Fun[1;31m"[0m[31m[0m,
+ @template_id[32m=[0m[1;36mnil[0m,
+ @tracking_settings[32m=[0m[1;36mnil[0m[32m>[0m
