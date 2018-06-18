@@ -87,4 +87,10 @@ namespace :newkey do
     require './lib/secure_db'
     puts "DB_KEY: #{SecureDB.generate_key}"
   end
+  
+  desc 'Create sample cryptographic key for tokens and messaging'
+  task :msg_key do
+    require './lib/auth_token'
+    puts "MSG_KEY: #{SecureDB.generate_key}"
+  end
 end
