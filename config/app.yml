@@ -2,6 +2,7 @@
 development:
   DB_FILENAME: db/dev.db
   DB_KEY: 'uo+NjFvxXgFjoScigLKl132LWO0R6/nHvglkzxkjA10='
+  MSG_KEY: '5VZCYir/+RpoIv+soOcz0gZEWcnM910Mv6Z6SDTDRXg='
   SECURE_SCHEME: HTTP
   API_URL: http://localhost:3000/api/v1
   APP_URL: http://localhost:9292
