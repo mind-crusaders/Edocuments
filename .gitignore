@@ -1,4 +1,4 @@
 db/*.*
-config/secrets.yml
+config/secrets.example.yml
 .bundle/
 sendgrid.env

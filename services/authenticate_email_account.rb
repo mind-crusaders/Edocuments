@@ -13,11 +13,11 @@ module Edocument
   end
 
   # Find account and check password
-  class AuthenticateAccount
+  class AuthenticateEmailAccount
     def self.call(credentials)
-      account = Account.first(username: credentials[:username])
-      account.password?(credentials[:password]) ? account : raise
-      #raise StandardError unless account.password?(credentials[:password])
+      account = EmailAccount.first(username: credentials[:username])
+      raise StandardError unless account.password?(credentials[:password])
+
 
       #{ account: account, auth_token: AuthToken.create(account) }
     rescue StandardError
