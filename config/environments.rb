@@ -36,8 +36,7 @@ module Edocument
         DB
       end
 
-     # SecureDB.setup(config.DB_KEY)
-     # AuthToken.setup(config.MSG_KEY)
+     SecureDB.setup(config)
     end
   end
 end
