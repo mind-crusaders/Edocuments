@@ -29,6 +29,11 @@ task :console => :print_env do
   sh 'pry -r ./specs/test_load_all'
 end
 
+desc 'Run application in development mode and port'
+task :run_dev do
+  sh 'rerun -c "rackup -p 3000"'
+end
+
 namespace :db do
   require_relative 'lib/init' # load libraries
   require_relative 'config/init' # load config info
@@ -81,10 +86,16 @@ namespace :db do
   task reseed: [:reset_seeds, :seed]
 end
 
-namespace :newkey do
+namespace :generate do
   desc 'Create sample cryptographic key for database'
-  task :db do
+  task :db_key do
     require './lib/secure_db'
     puts "DB_KEY: #{SecureDB.generate_key}"
+  end
+  
+  desc 'Create sample cryptographic key for tokens and messaging'
+  task :msg_key do
+    require './lib/auth_token'
+    puts "MSG_KEY: #{SecureDB.generate_key}"
   end
 end
