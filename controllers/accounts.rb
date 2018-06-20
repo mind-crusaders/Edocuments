@@ -8,10 +8,6 @@ module Edocument
     route('accounts') do |routing|
       @account_route = "#{@api_root}/accounts"
 
-      routing.on 'authenticate' do
-        routing.route('authenticate', 'accounts')
-      end
-
       routing.on String do 
         # GET api/v1/accounts/[USERNAME]
         routing.get do |username|
@@ -23,7 +19,7 @@ module Edocument
       # POST api/v1/accounts
       routing.post do
         new_data = JSON.parse(routing.body.read)
-        new_account = Account.new(new_data)
+        new_account = EmailAccount.new(new_data)
         raise('Could not save account') unless new_account.save
 
         response.status = 201
