@@ -7,10 +7,11 @@ module Edocument
   class Api < Roda
     route('accounts') do |routing|
       @account_route = "#{@api_root}/accounts"
-
+      
       routing.on String do 
+
         # GET api/v1/accounts/[USERNAME]
-        routing.get do |username|
+        routing.get do 
           account = Account.first(username: username)
           account ? account.to_json : raise('Account not found')
         end
@@ -25,6 +26,11 @@ module Edocument
         response.status = 201
         response['Location'] = "#{@account_route}/#{new_account.id}"
         { message: 'Project saved', data: new_account }.to_json
+      rescue Sequel::MassAssignmentRestriction
+        routing.halt 400, { message: 'Illegal Request' }.to_json
+      rescue StandardError => error
+        puts error.inspect
+        routing.halt 500, { message: error.message }.to_json
       end
     end
   end
