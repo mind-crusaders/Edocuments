@@ -2,6 +2,7 @@
 
 require 'rbnacl/libsodium'
 require 'base64'
+require_relative "init"
 
 # Parses Json information as needed
 class SignedRequest
