@@ -6,18 +6,18 @@ module Edocument
   # Web controller for Edocument API
   class Api < Roda
     route('auth') do |routing|
-      #routing.on 'authenticate' do
-       # routing.route('authenticate', 'auth')
-      #end
+      routing.on 'authenticate' do
+        routing.route('authenticate', 'auth')
+      end
 
       routing.on 'register' do
         # POST api/v1/auth/register
         routing.post do
-          #registration = SignedRequest.new(Api.config)
-                                      #.parse(request.body.read)
+          registration = SignedRequest.new(Api.config)
+                                      .parse(request.body.read)
           reg_data = JSON.parse(routing.body.read)
-          #EmailVerification.new(Api.config).call(registration)
-          EmailVerification.new(Api.config).call(reg_data)
+          EmailVerification.new(Api.config).call(registration)
+          #EmailVerification.new(Api.config).call(reg_data)
 
           response.status = 201
           { message: 'Verification email sent' }.to_json
