@@ -3,7 +3,7 @@
 require 'roda'
 
 module Edocument
-  # Web controller for Edocument API
+  # Web controller for Wefix API
   class Api < Roda
     route('auth') do |routing|
       routing.on 'authenticate' do
@@ -15,9 +15,7 @@ module Edocument
         routing.post do
           registration = SignedRequest.new(Api.config)
                                       .parse(request.body.read)
-          reg_data = JSON.parse(routing.body.read)
           EmailVerification.new(Api.config).call(registration)
-          #EmailVerification.new(Api.config).call(reg_data)
 
           response.status = 201
           { message: 'Verification email sent' }.to_json
