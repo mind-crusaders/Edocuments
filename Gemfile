@@ -7,6 +7,9 @@ gem 'puma'
 gem 'json'
 gem 'sendgrid-ruby'
 
+#Amazon aws
+gem 'aws-sdk', '~> 2'
+
 # Configuration
 gem 'econfig'
 gem 'rake'
