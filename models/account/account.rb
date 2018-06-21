@@ -30,6 +30,7 @@ module Edocument
         {
           type: 'type',
           username: username,
+          password: :password,
           email: email,
           lastname: lastname,
           firstname: firstname
