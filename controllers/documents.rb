@@ -2,7 +2,7 @@
 
 require 'roda'
 
-module Credence
+module Edocument
   # Web controller for Credence API
   class Api < Roda
     route('documents') do |routing|
@@ -25,7 +25,7 @@ module Credence
       end
 
       # GET api/v1/documents
-      routing.get do
+      routing.get("add") do
         account = Account.first(username: @auth_account['username'])
         documents_scope = DocumentPolicy::AccountScope.new(account)
         viewable_documents = documents_scope.viewable
