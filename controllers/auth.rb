@@ -3,7 +3,7 @@
 require 'roda'
 
 module Edocument
-  # Web controller for Edocument API
+  # Web controller for Wefix API
   class Api < Roda
     route('auth') do |routing|
       routing.on 'authenticate' do

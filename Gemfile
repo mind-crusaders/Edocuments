@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.5.1'
 
 # Web API
 gem 'roda'
@@ -6,15 +7,22 @@ gem 'puma'
 gem 'json'
 gem 'sendgrid-ruby'
 
+#Amazon aws
+gem 'aws-sdk'#, '~> 2' 
+
 # Configuration
 gem 'econfig'
 gem 'rake'
 
 # Diagnostic
 gem 'pry'
+gem 'rack-test'
 
 # Security
 gem 'rbnacl-libsodium'
+
+# Services
+gem 'http'
 
 # Database
 gem 'sequel'
@@ -27,7 +35,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rack-test'
 end
 
 
@@ -35,7 +42,6 @@ end
 group :test do
   gem 'minitest'
   gem 'minitest-rg'
-  gem 'rack-test'
 end
 
 # Development

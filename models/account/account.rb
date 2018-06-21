@@ -4,6 +4,10 @@ require 'json'
 module Edocument
   # Models a registered account
   class Account < Sequel::Model
+    plugin :single_table_inheritance, :type,
+           model_map: { 'email' => 'Edocument::EmailAccount',
+                        'sso'   => 'Edocument::SsoAccount' }
+
     one_to_many :owned_documents, class: :'Edocument::Document', key: :owner_id
     plugin :association_dependencies, owned_documents: :destroy
 
@@ -21,22 +25,12 @@ module Edocument
       owned_documents + views
     end
 
-    def password=(new_password)
-      self.salt = SecureDB.new_salt
-      self.password_hash = SecureDB.hash_password(salt, new_password)
-    end
-
-    def password?(try_password)
-      try_hashed = SecureDB.hash_password(salt, try_password)
-      try_hashed == password_hash
-    end
-
     def to_json(options = {})
       JSON(
         {
-          type: 'account',
-          id: id,
+          type: 'type',
           username: username,
+          password: :password,
           email: email,
           lastname: lastname,
           firstname: firstname
