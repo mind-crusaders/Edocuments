@@ -3,7 +3,7 @@
 require 'roda'
 
 module Edocument
-  # Web controller for Wefix API
+  # Web controller 
   class Api < Roda
     route('accounts') do |routing|
       @account_route = "#{@api_root}/accounts"
