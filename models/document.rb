@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'json'
+require 'sequel'
+
 module Edocument
   # Models a project
   class Document < Sequel::Model

@@ -3,7 +3,7 @@
 require 'roda'
 
 module Edocument
-  # Web controller for Credence API
+  # Web controller for Edocument API
   class Api < Roda
     route('documents') do |routing|
       @proj_route = "#{@api_root}/documents"
